@@ -5,47 +5,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Delievery site</title>
+  <link rel="stylesheet" href="/fonts/Roboto-Regular.ttf">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <header class="top">
-    <div class="container">
-      <div class="header-box">
-        <div class="header-logo">
+  <div class="wrapper">
+    <header class="top">
+      <div class="container">
+        <div class="header-box">
+          <div class="header-logo">
+            <div class="logo">
+              <div class="bottom-logo"><img src="/imges/outline.svg" alt=""></div>
+              <div class="top-text">Delivery <br> Food</div>
+            </div>
+          </div>
+          <div class="header-controls">
+            <button type="submit" class="btn btn-logIn"><img src="/imges/user.svg" alt="">Войти</button>
+            <button type="submit" class="btn btn-cart"><img src="/imges/shopping-cart.svg" alt="">Корзина</button>
+          </div>
+        </div>
+    </header>
+    <main class="content">
+      <section class="banner">
+        <div class="container">
+          <div class="banner-item">
+            <h2 class="banner-item--title">Онлайн-сервис <br>доставки еды на дом</h2>
+            <p class="banner-item--subtitle">Блюда из любимого ресторана привезет <br> курьер в перчатках, маске и с
+              антисептиком</p>
+          </div>
+        </div>
+      </section>
+      <section class="products">
+        <div class="container">
+          <div class="products-header">
+            <h3 class="tproducts-header--title">Рестораны</h3>
+            <input type="text" class="products-header--search" placeholder="Поиск блюд и ресторанов">
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bottom">
+      <div class="container">
+        <div class="bottom-box">
           <div class="logo">
             <div class="bottom-logo"><img src="/imges/outline.svg" alt=""></div>
             <div class="top-text">Delivery <br> Food</div>
           </div>
-        </div>
-        <div class="header-controls">
-          <button type="submit">log in </button>
-          <button type="submit">sign up</button>
-        </div>
-      </div>
-  </header>
-  <main class="content">
-    <div class="container">
-      <h3>Our Services</h3>
-    </div>
-  </main>
-  <footer class="bottom">
-    <div class="container">
-      <div class="bottom-box">
-        <div class="logo">
-          <div class="bottom-logo"><img src="/imges/outline.svg" alt=""></div>
-          <div class="top-text">Delivery <br> Food</div>
-        </div>
-        <div class="nav"><a href=""></a>1</div>
-
-        <div class="bottom-links">
-          <a href="#">icon</a>
-          <a href="#">icon</a>
-          <a href="#">Vk</a>
+          <div class="nav">
+            <ul>
+              <li>Ресторанам</li>
+              <li>Курьерам</li>
+              <li>Пресс-центр</li>
+              <li>Контакты</li>
+            </ul>
+          </div>
+          <div class="bottom-links">
+            <img src="/imges/Instagram.svg" alt="">
+            <img src="/imges/FaceBook.svg" alt="">
+            <img src="/imges/VK.svg" alt="">
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </body>
 
 </html>
