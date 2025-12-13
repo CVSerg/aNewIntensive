@@ -42,8 +42,10 @@ body {
 
 .btn {
   display: flex;
+  align-items: center;
   padding: 8px 16px;
   gap: 4px;
+  cursor: pointer;
 }
 
 .btn-logIn {
@@ -72,8 +74,32 @@ body {
   align-items: center;
 }
 
+.closing-btn {
+  border-radius: 2px;
+  border: 1px solid #D9D9D9;
+  background-color: #FFFFFF;
+  padding: 8px 16px;
+}
+
+.controls {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.in-cart {
+  display: flex;
+  align-items: center;
+  background-color: #1890FF;
+  border: none;
+  color: #FFF;
+}
+
+
 .header-logo {
   display: flex;
+  text-decoration: none;
+  color: #000000;
 }
 
 .logo {
@@ -152,13 +178,15 @@ body {
 }
 
 .banner-item {
-  background-image: url(/imges/BannerIMG.jpg);
+  background-image: url(/images/BannerIMG.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center right;
   padding: 68px;
   border-radius: 10px;
+  background-color: #FFF1B8;
 }
+
 
 .banner-item--title {
   max-width: 50%;
@@ -180,12 +208,11 @@ body {
 }
 
 
-.products {}
-
 .products-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .products-header--title {
@@ -194,6 +221,7 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  margin: 0;
 }
 
 .products-header--search {
@@ -216,12 +244,242 @@ body {
 }
 
 
-@media (max-width: 900px) {
-  .banner-item--title {
-    max-width: 100%;
+
+.products-wrapper {
+  margin: 50px 0 90px 0;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 24px;
+  width: 100%;
+  height: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.product-card {
+  width: calc((100% - 48px) / 3);
+  border-radius: 7px;
+  background: #FFF;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.product-card-img img {
+  width: 100%;
+}
+
+
+.product-card-description {
+  padding: 20px 24px 34px 24px;
+}
+
+.product-card-description-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card-description-row:not(:last-child) {
+  margin-bottom: 10px 0 0 0;
+}
+
+.product-card-description-title {
+  color: #000;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0;
+}
+
+.product-card-description-cookingTime {
+  background-color: #262626;
+  padding: 1px 8px 1px 8px;
+  gap: 10px;
+  border-radius: 2px;
+  color: #FFF;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  font-style: normal;
+}
+
+.product-card-description-raiting {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #8C8C8C;
+  flex-wrap: nowrap;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sushi-price {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+
+
+.product-card-description-star {
+  color: #FFC107;
+}
+
+.product-card-description-name {
+  margin: 0;
+  padding-bottom: 10px;
+  color: #000;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.product-card-description-text {
+  margin: 0;
+  padding-bottom: 10px;
+  color: #8C8C8C;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.card-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.40);
+  align-items: center;
+  justify-content: center;
+}
+
+.card-modal-overlay.unhidden {
+  display: block;
+}
+
+.card-modal {
+  max-width: 780px;
+  width: 100%;
+  padding: 40px 45px;
+  background: #FFF;
+}
+
+.card-modal-top {
+  display: flex;
+  justify-content: space-between;
+  color: #000000;
+}
+
+.card-modal-top h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  margin-bottom: 48px;
+  margin: 0;
+}
+
+.card-modal-top img {
+  cursor: pointer;
+}
+
+.card-modal-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.card-modal-middle {
+  margin-top: 50px
+}
+
+.card-modal-middle-price {
+  border-radius: 5px;
+  background: #262626;
+  color: #fafafa;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  padding: 15px 20px;
+}
+
+.card-modal-middle-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-item:not(:last-child) {
+  padding-bottom: 8px;
+  margin-bottom: 17px;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+
+.card-item-title {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0;
+}
+
+.card-item-controls {
+  display: flex;
+  align-items: center;
+}
+
+.card-item-controls button {
+  border: 1px solid #40A9FF;
+  background-color: #FFF;
+  color: #40A9FF;
+}
+
+.controls-price {
+  margin-right: 47px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.controls-price-count {
+  padding: 0;
+  margin: 0 15px;
+}
+
+*/ @media (max-width: 991px) {
+  .banner-item {
+    background-image: none;
   }
 
-  .banner-item--subtitle {
-    max-width: 100%;
+  .product-card {
+    width: calc(((100% - 24px) / 2));
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
   }
 }
